@@ -26,8 +26,15 @@ This Biofeedbacl-driven Tonglen Visualization occurs within "Equanimity_scene_re
 
 ## Version Information
 
-- **Unity Version**: 2021.
-- **Python Version**: 3.x.x
+- **Unity Version**: 2021.3.15f1
+- **Python Version**: 3.11
+- **Excit-o-meter**: version unknown
+
+
+## Equipment
+
+- Meta Quest 3 VR headset
+- Polar H10 chest strap
 
 ## Installation
 

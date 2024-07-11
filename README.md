@@ -22,7 +22,7 @@ This Biofeedbacl-driven Tonglen Visualization occurs within "Equanimity_scene_re
 
 ## Reference Demo Video
 
-[[Project Demo](https://www.youtube.com/watch?v=YOUR_VIDEO_ID_HERE](https://www.youtube.com/watch?v=nX0OzUGAA_g))
+[Project Demo](https://www.youtube.com/watch?v=YOUR_VIDEO_ID_HERE](https://www.youtube.com/watch?v=nX0OzUGAA_g)
 
 ## Version Information
 

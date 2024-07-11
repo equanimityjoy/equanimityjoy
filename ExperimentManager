@@ -1,0 +1,80 @@
+Here are instructions for how to get everything set up.
+
+
+######
+SETUP
+######
+
+
+1. Download the Python script (attached).
+
+
+2. Switch Plastic workspace to changeset #73.
+
+
+3. Recording setup.
+In the Unity project, navigate to the Equanimity_respiration_scene_2. There is an object in the scene called Experiment Manager. When you click on it, in the Inspector window, scroll down to the Equanimity Experiment Manager component. The script associated with this component is adapted from the Excite-o-Meter SimpleExperimentManager.cs script.
+
+
+Here, you can change how the experiment runs. The basic setup is that there is a Baseline period, followed by n Experimental Stages, which are broken up with Resting periods. At the top of the Equanimity Experiment Manager component, you can specify the times for these different stages. For example, if you wanted to record two minutes of experimental stage data, you would enter 120 for Experimental Stage Seconds. If you only have 1 experimental stage, I don’t think the Resting period plays at the end, but I might be wrong. The Baseline stage will always play. I haven’t tried entering 0 seconds to skip it.
+
+
+In the Setup stages section, the important thing is the Experiment Stages dropdown. You can add more stages here by clicking “+” and then creating an empty GameObject in the scene that corresponds to the stage.
+
+
+########
+RUNNING
+########
+
+
+1. Switch to the Equanimity_respiration_scene_2.
+This is located in the same folder as Equanimity_scene.
+
+
+2. Open a PowerShell window and run the Python script attached in the email.
+Navigate to the directory where the script lives and use the command "python eq_server_v5.py." 
+
+
+3. Press Play in Unity.
+
+
+4. Have the user hold the Right Controller in their right hand, and place the controller against their belly, at or below the navel. 
+Traditional meditation posture has the right hand resting on top of the left hand, with both hands slightly below the navel.
+
+
+5. When you are ready to have the user control the smoke/light, click the checkbox in the top left that says “Stream right controller”.
+Once the python server collects enough baseline data, it will start sending inhale and exhale duration predictions to Unity. Once Unity has these predictions, it will begin animating the light/smoke.
+
+
+###########
+RECORDING
+###########
+
+
+1. Enter in the Protocol ID and Subject ID.
+I have been using the naming convention p001 and s001. Protocols and subjects can be kept track of in a spreadsheet somewhere. 
+
+
+2. Uncheck the box next to “Record screenshot periodically”.
+
+
+3. Enter “20” samples per second next to the Record movement checkbox. (Leave this box checked.)
+This is important because it will sample the controller/headset movement at 20Hz, which is the sampling rate we use in real-time for respiratory detection. We can use recorded data for further respiration algorithm development & validation.
+
+
+4. When you are ready, click “Start/Stop Experiment”.
+The experiment will run to completion. A pop-up window will appear on the screen when the experiment has completed.
+
+
+5. Access log files.
+They are located wherever Unity files are typically stored on your computer. On mine, since I have Unity on D Drive, it’s D > Unity > Equanimity > LogFiles_ExciteOMeter > [log_file].
+
+
+#################
+ENDING A SESSION
+#################
+
+
+1. Press “Stop” in the Unity scene.
+You shouldn’t need to reset the Python server.
+
